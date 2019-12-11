@@ -19,8 +19,25 @@
         
     }
     
-    .weather-switch {
+    .weather-switch-toggle {
         float: left;
+        display: none;
+    }
+
+    .weather-switch-button {
+        float: left;
+    }
+
+    @media screen and (min-width: 487px) {
+        .weather-switch-button {
+            float: left;
+            display: none;
+        }
+        .weather-switch-toggle {
+            display: flex;
+            float: left;
+        }
+
     }
 
     .center {

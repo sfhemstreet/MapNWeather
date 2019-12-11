@@ -2,7 +2,8 @@ import React from 'react';
 
 import './Weather.scss';
 
-import Switch from '../components/Switch';
+import ToggleSwitch from '../components/ToggleSwitch';
+import ButtonSwitch from '../components/ButtonSwitch';
 import WeatherWindow from '../components/WeatherWindow';
 
 import { get5DayWeather, getCurrentWeather } from '../API/getWeather';
@@ -217,8 +218,11 @@ class Weather extends React.Component<WeatherProps, WeatherState>{
 
         return (
             <div className='weather-container'>
-                <div className='weather-switch'>
-                    <Switch isOn={isMetric} onChange={this.handleUnitChange} display={{on: 'C°', off: 'F°'}}/> 
+                <div className='weather-switch-toggle'>
+                    <ToggleSwitch isOn={isMetric} onClick={this.handleUnitChange} display={{on:'C°', off: 'F°'}}/> 
+                </div>
+                <div className='weather-switch-button'>
+                    <ButtonSwitch isOn={isMetric} onClick={this.handleUnitChange} display={{on:'C°', off: 'F°'}}/> 
                 </div>
                 <div className='inline'> 
                     {/* Current Weather */}

@@ -1,25 +1,25 @@
 import React from 'react';
 
-import './Switch.scss';
+import './ButtonSwitch.scss';
 
-interface SwitchProps {
+interface ButtonSwitchProps {
     isOn: boolean
-    onChange: () => void
+    onClick: () => void
     display?: {
         on: string, 
         off: string
     }
 }
 
-const Switch = ({isOn, onChange, display}: SwitchProps) => {
+const ButtonSwitch = ({isOn, onClick, display}: ButtonSwitchProps) => {
     return (
         <div className='switch-container'>
             <label className="toggle">
-                <input onClick={onChange} type="checkbox" tabIndex={-1}/>
+                <input onClick={onClick} type="checkbox" tabIndex={-1}/>
                 <span className="switch-left">{isOn ? (display? display.on : 'On') : ((display? display.off : 'Off'))}</span>
             </label>    
         </div>
     )
 }
 
-export default Switch;
+export default ButtonSwitch;
