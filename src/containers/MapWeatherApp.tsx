@@ -20,15 +20,6 @@ interface MapWeatherAppState{
     areas: null | AreaObject[],
 }
 
-const Yosemite: SelectedAreaObject = {
-    name: 'Yosemite', 
-    coords: {
-        lat: 37.723, 
-        lng: -119.635
-    },
-    description: "THE climbing destination."
-}
-
 class MapWeatherApp extends React.Component<MapWeatherAppProps, MapWeatherAppState>{
     constructor(props: MapWeatherAppProps){
         super(props);
