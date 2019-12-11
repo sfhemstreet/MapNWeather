@@ -1,0 +1,86 @@
+.weather-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    
+    transition: all 1s;
+}
+
+
+.weather-window-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.weather-window-bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.weather-window-top {
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    border-bottom: rgb(126, 126, 126) 1px solid;
+    margin-bottom: 5px;
+
+    .item {
+        padding: 1px 10px;
+    }
+}
+
+.weather-window-cloud {
+    padding: 2px 5px;
+    
+    align-self: center;
+
+    .padding-bottom {
+        padding-bottom: 5px;
+    }
+    .padding-top {
+        padding-top: 2px;
+    }
+    
+}
+
+
+@media screen and (min-width: 600px){
+    .weather-window{
+        .together2{
+            display: flex;
+            align-items: flex-start;
+        } 
+    }
+    .weather-window-cloud {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .weather-window{
+        .together1{
+            display: flex;
+            align-items: flex-start;
+        } 
+        .together2{
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    .weather-window-cloud {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+}

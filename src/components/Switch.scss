@@ -1,0 +1,195 @@
+$slider-color : rgb(27, 60, 87);
+$slider-checked-color: rgb(34, 75, 22);
+
+
+
+.toggle {
+    display: block;
+    position: relative;
+    
+    font-size: 10px; // Sizes the switch 
+    margin: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888;
+    width: 4em;
+    height: 4em;
+    overflow: hidden;
+    border-bottom: 0.5em solid rgb(223, 223, 223);
+
+    input {
+        display: none;
+    }
+}
+
+// bottom of lifted left side 
+.toggle::before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+    border: 0.5em solid rgb(223, 223, 223);
+    border-bottom: 0;
+}
+  
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.switch-left {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 3em;
+    transition: 0.2s;
+}
+  
+// Face of left side  
+.switch-left {
+    height: 2.4em;
+    width: 2.75em;
+    left: 0.85em;
+    bottom: 0.4em;
+    background-color: rgb(253, 253, 253);
+    color: black;
+    //transform: rotate(10deg) skewX(10deg);
+}
+  
+
+  
+// left side of lifted left 
+.switch-left::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    background-color: rgb(204, 204, 204);
+    transform: skewY(-65deg);
+}
+  
+.switch-left::before {
+    left: -0.3em;
+}
+  
+.switch-right::before {
+    right: -0.375em;
+    background-color: transparent;
+    transform: skewY(65deg);
+}
+                
+input:checked + .switch-left {
+    border: rgb(180, 180, 180) solid 1px;
+    background-color: white;
+    color: black;
+    bottom: 0px;
+    left: 0.5em;
+    height: 2.5em;
+    width: 2.756em;
+    transform: rotate(0deg) skewX(0deg);
+}
+  
+input:checked + .switch-left::before {
+    background-color: transparent;
+    width: 3.0833em;
+}
+  
+
+input:checked + .switch-left + .switch-right::before {
+    background-color: #ccc;
+}
+  
+  // Keyboard Users 
+input:focus + .switch-left {
+    color: #333;
+}
+  
+input:checked:focus + .switch-left {
+    color: #fff;
+}
+  
+
+
+
+
+/*
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    color: black;
+    
+    .switch input {
+        display: none;
+    }
+      
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $slider-color;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    .slider:before,
+    .slider .display {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: rgb(255, 255, 255);
+        color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    .slider .display {
+        background: none;
+        font-size: 14px;
+        left: 9px;
+        top: 9px;
+    }
+      
+    input:checked+.slider {
+        background-color: $slider-checked-color;
+    }
+      
+    input:focus+.slider {
+        box-shadow: 0 0 1px $slider-checked-color;
+    }
+      
+    input:checked+.slider:before,
+    input:checked+.slider .display {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+      
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+      
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+*/
+  

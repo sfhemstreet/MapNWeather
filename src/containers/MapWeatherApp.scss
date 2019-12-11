@@ -1,0 +1,65 @@
+.map-weather-app-container {
+    font-size: 15px;
+
+    background-color: #282c34;
+    min-height: 100vh;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 0px 1fr;
+    grid-template-rows: 450px 1fr;
+    grid-template-areas:"navi upper" 
+                        "navi lower";
+}
+
+
+@media screen and (min-width: 700px){
+    .map-weather-app-container {
+       font-size: 18px; 
+    }
+}
+
+  
+.map-weather-app-nav {
+    background-color: #282c34;
+    z-index: 3;
+    transition: all .4s ease-in-out;
+    //border-right: solid 1px black;
+    grid-area: navi;
+    width: 55px;
+}
+
+.map-weather-app-nav.open{
+    width: 200px;
+}
+  
+.map-weather-app-upper { 
+    background-color: #3f4042;
+    grid-area: upper;
+    z-index: 1;
+}
+
+.map-weather-app-lower {  
+    background-color: #3f4042;
+    grid-area: lower;
+    z-index: 1;
+}
+
+.title {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 23px;
+}
+
+.line {
+    width: 96%;
+    height: 1px;
+    background-color: white;
+    border: white;
+    border-radius: 10px;
+}
+
+
+  
+
+

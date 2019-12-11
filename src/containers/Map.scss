@@ -1,0 +1,28 @@
+.map-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 400px;
+    grid-template-areas: "map-upper" "map-main";
+}
+
+.map-main {
+    grid-area: map-main;
+    padding-top: 10px;
+}
+
+.map-upper {
+    grid-area: map-upper;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    padding-left: 20px;
+
+    .item {
+        align-self: flex-end;
+    }
+}
+
+
+
+
+

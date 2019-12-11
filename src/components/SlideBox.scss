@@ -1,0 +1,60 @@
+.slidearea {
+    //overflow-x: 'scroll'; 
+    min-width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 5px 1px;
+    margin: 1px;
+    border: solid rgb(73, 73, 73) 1px;
+    background-color: rgb(59, 59, 59);
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 400px){
+    .slidearea {
+        min-width: 350px
+    }
+}
+
+@media screen and (min-width: 500px){
+    .slidearea {
+        min-width: 450px
+    }
+}
+
+@media screen and (min-width: 600px){
+    .slidearea {
+        min-width: 550px
+    }
+}
+
+@media screen and (min-width: 750px){
+    .slidearea {
+        min-width: 700px
+    }
+}
+
+@media screen and (min-width: 900px){
+    .slidearea {
+        min-width: 850px
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .slidearea {
+        min-width: 950px
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .slidearea {
+        min-width: 1150px
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .slidearea {
+        min-width: 1550px
+    }
+}

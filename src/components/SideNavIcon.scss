@@ -1,0 +1,120 @@
+.sidenav-icon-button {
+   
+    background: none;
+    border: 0;
+    color: inherit;
+    
+    
+}
+
+
+.sidenav-icon-container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding-top: 5px;
+}
+
+.sidenav-icon-container:hover {
+    color: rgb(0, 247, 255);
+}
+
+.menu-icon {
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: currentColor;
+
+    animation-name: spinBack;
+    animation-duration: 1s;
+}
+  
+.menu-icon:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: currentColor;
+}
+  
+.menu-icon:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: currentColor;
+}
+  
+.x-icon {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+
+    animation-name: spin;
+    animation-duration: 1s;
+}
+  
+.x-icon:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    width: 30px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.x-icon:after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    width: 30px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+
+@keyframes spin {
+	0%  {transform: rotate(0deg);}
+	100% {transform: rotate(180deg);}	
+}
+
+@keyframes spinBack {
+	0%  {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.1;
+    }
+
+	100% {
+        transform: rotate(-180deg);
+        opacity: 1;
+    }	
+}
+
+
