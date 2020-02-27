@@ -1,6 +1,8 @@
 # Map n Weather
 
-![]mapnweather.png
+![](mapnweather_demo.jpg)
+
+![](mapnweather_demo2.gif)
 
 Map, and Weather, together. 
 
@@ -14,3 +16,5 @@ React/TypeScript demo project
 To Run:
 - npm install
 - npm start
+
+
