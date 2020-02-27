@@ -1,5 +1,7 @@
 # Map n Weather
 
+![]mapnweather.png
+
 Map, and Weather, together. 
 
 I wanted to visualize the weather, so the map can display current clouds, precip, wind, and temp.
